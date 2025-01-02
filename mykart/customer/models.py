@@ -1,6 +1,14 @@
 from django.db import models
-
+from django.contrib.auth.models import AbstractBaseUser
 # Create your models here.
+
+
+class Customer_data(AbstractBaseUser):
+    username=models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.username
+
 
 
 class Category(models.Model):
